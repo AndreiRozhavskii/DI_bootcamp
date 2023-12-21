@@ -98,17 +98,7 @@ let values=[.25, .1, .05, .01];
 function changeEnough(itemPrice, amountOfChange){
     let x=itemPrice;
     for(let i=0; i<amountOfChange.length; i++){
-        const y=amountOfChange[i]*values[i];
-        x-=y
-        if(x<0)
-        return true
-        
-    }
-    return false
     
+    }
 }
-changeEnough(5,[20, 10, 5, 0])
-
 //Exercise 6
-
-
