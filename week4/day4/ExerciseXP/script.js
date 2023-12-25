@@ -38,3 +38,55 @@ let newLi= document.createElement("li")
 ul3.appendChild(newLi);
 newLi.textContent="Logout";
 
+//Exercise 4
+const allBooks = [
+    {
+        "title": "book1",
+        "author": "author1",
+        "image": "url1",
+        "alreadyRead:": "yes"
+    },
+    {
+        "title": "book2",
+        "author": "author2",
+        "image": "url2",
+        "alreadyRead:": "no"    
+    }
+]
+let obj1= allBooks[0]
+let obj2= allBooks[1]
+let bookDiv = document.querySelector(".listBooks");
+// console.log(bookDiv)
+const tbl = document.createElement("table");
+const tblBody = document.createElement("tbody");
+const tr = document.createElement("tr")
+const th1 = document.createElement("th1") 
+const th2 = document.createElement("th2")
+const th3 = document.createElement("th3")
+container.append(tbl);
+tr.append(th1,th2,th3);
+tbl.append(tr);
+th1.innerText="Title";
+th2.innerText="Author";
+th3.innerText="Image";
+
+for (let book in allBooks){
+    const bookTr=document.createElement("tr");
+    const td1=document.createElement("td");
+    const td2=document.createElement("td");
+    const td3=document.createElement("td");
+    const img=document.createElement("img");
+
+    td1.innerText = book.title;
+    td2.innerText = book.author;
+    img.setAttribute("src", book.image)
+    td3.append(img)
+    bookTr.append(td1,td2,td3);
+    tbl.append(bookTr);
+    if(book.alreadyRead){
+        bookTr.style.color="red"
+    }
+
+}
+
+    
