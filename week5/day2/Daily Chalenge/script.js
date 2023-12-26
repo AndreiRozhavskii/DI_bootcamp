@@ -1,6 +1,6 @@
 let form =document.forms[0];
-form.addEventListener("submit",(e)=>{
-    e.preventDefault();
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();
     let noun= form.noun.value;
     let adjective= form.adjective.value;
     let person= form.person.value;
