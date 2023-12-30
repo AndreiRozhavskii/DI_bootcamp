@@ -11,7 +11,7 @@ form.addEventListener("submit",(e)=>{
        for(let i=0; i<listTasks.length; i++){
         if (listTasks[i] === inputValue){
         let li = document.createElement("li");
-        li.innerHTML=`<button class="xBtn"><i class="fa-solid fa-x"></i></button> <input type="checkbox" class="checkbox">`;
+        li.innerHTML=`<input type="checkbox" class="checkbox">`;
         let text = document.createTextNode(form.item.value)
         li.append(text)
         ul.append(li);
