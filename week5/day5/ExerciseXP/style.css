@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+
+#sidebar{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
+    width: 20%;
+    float: left;
+}
+
+#sidebar>*{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+button#clear{
+    
+    grid-column: 1/4;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(60,1fr);
+    height: 100vh;
+    padding: 5px;
+
+}
+#main>*{
+    border: 1px solid lightgrey;
+    background-color: #fff;
+}
