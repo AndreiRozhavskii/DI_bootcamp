@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+</head>
+<body>
+    <section id="quote-section">
+        <p id="quote"></p>
+        <p id="author"></p>
+    </section>
+        
+        <button id="generate-quote">Generate Quote</button>
+
+    <form id="add-quote-form">
+        <label for="new-quote">Quote:</label>
+        <input type="text" id="new-quote" name="new-quote" required>
+        <label for="new-author">Author:</label>
+        <input type="text" id="new-author" name="new-author" required>
+        <button type="submit" id="add-quote">Add Quote</button>
+    </form>    
+    <form id="filter-quote-form">
+        <label for="filter-author">Author:</label>
+        <input type="text" id="filter-author" name="filter-author" required>
+        <button type="submit" id="filter-quote">Filter Quote</button>
+    </form>
+        
+        <button id="count-characters-with-space">Count Characters (Space Included)</button>
+        <button id="count-characters-without-space">Count Characters (Space Not Included)</button>
+        <button id="count-words">Count Words</button>
+        <button id="like-quote">Like Quote</button>
+        <button id="previous-quote">Previous Quote</button>
+        <button id="next-quote">Next Quote</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
