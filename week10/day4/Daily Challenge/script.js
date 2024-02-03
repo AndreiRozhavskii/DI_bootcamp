@@ -1,34 +1,58 @@
-//Exercise1
-const arr = [Promise.resolve(3), Promise.resolve(4), Promise.resolve(5)];
+const form = document.getElementById("gif-form");
+const input = document.getElementById("gif-input");
+const button = document.getElementById("gif-button");
+const container = document.getElementById("gif-container");
 
-function resolver(arr) {
-  const newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    arr[i].then((resolve) => newArr.push(resolve));
-  }
-  console.log(newArr);
+
+const API_KEY = "hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My";
+const BASE_URL = "https://api.giphy.com/v1/gifs/random";
+
+
+form.addEventListener("submit", function(event) {
+
+event.preventDefault();
+
+const category = input.value;
+
+fetchGif(category);
+});
+
+function fetchGif(category) {
+const url = `${BASE_URL}?api_key=${API_KEY}&tag=${category}`;
+fetch(url)
+.then(function(response) {
+if (response.ok) {
+return response.json();
+} else {
+throw new Error("Something went wrong");
+}
+})
+.then(function(data) {
+const gifUrl = data.data.images.original.url;
+displayGif(gifUrl);
+})
+.catch(function(error) {
+console.error(error);
+alert(error.message);
+});
+}
+function displayGif(gifUrl) {
+
+const gif = document.createElement("img");
+gif.src = gifUrl;
+const deleteButton = document.createElement("button");
+deleteButton.textContent = "Delete";
+deleteButton.addEventListener("click", function() {
+container.removeChild(gif);
+container.removeChild(deleteButton);
+});
+container.appendChild(gif);
+container.appendChild(deleteButton);
 }
 
-//Exercise 2
-const form = document.forms[0];
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const lat1 = form.lat1.value;
-  const long1 = form.long1.value;
-  const lat2 = form.lat2.value;
-  const long2 = form.long2.value;
-  form.lat1.value = "";
-  form.long1.value = "";
-  form.lat2.value = "";
-  form.long2.value = "";
-  const response1 = await fetch(`http://api.sunrise-sunset.org/json?lat=${lat1}&lng=${long1}`);
-  const response2 = await fetch(`http://api.sunrise-sunset.org/json?lat=${lat2}&lng=${long2}`);
-  const result = await Promise.all([response1, response2]);
-  //   console.log(result);
-  result.forEach((item) => {
-    item.json().then((data) => {
-      console.log("Sunrise: " + data.results.sunrise);
-      console.log("Sunset: " + data.results.sunset);
-    });
-  });
+const deleteAllButton = document.getElementById("delete-all-button");
+deleteAllButton.addEventListener("click", function() {
+while (container.firstChild) {
+container.removeChild(container.firstChild);
+}
 });
