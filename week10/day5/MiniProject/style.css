@@ -6,6 +6,7 @@
 
 body{
     background-image: url("./background.jpg");
+    
     font-family:monospace;
 }
 .wrapper{
@@ -24,6 +25,7 @@ body{
     min-width: 450px;
     min-height: 270px;
     border-radius: 12px;
+    border:2px solid yellow;
     margin-top: 40px;
     color:white;
     display:flex;
@@ -43,6 +45,7 @@ p{
     height:45px;
     font-size: large;
     margin-top: 40px;
+    border: 2px yellow solid;
     border-radius: 10px;
 }
 
