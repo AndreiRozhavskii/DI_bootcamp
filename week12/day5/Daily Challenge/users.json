@@ -1,0 +1,48 @@
+[
+    {
+      "name": "john",
+      "lastName": "doe",
+      "email": "john@doe.com",
+      "username": "johndoe",
+      "password": "$2b$10$GaP4.ufzqqNCcUVfG5TKLelLrCZSzHhTQTnTVGSIDdIdHMFVweEaC"
+    },
+    {
+      "id": "ca13499c-1732-4953-a934-2a68b615a42e",
+      "name": "lou",
+      "lastName": "roe",
+      "email": "lue@doe.com",
+      "username": "lueroe",
+      "password": "$2b$10$I1o1QoclAqynG5Elw6OZf.V8MvJqgEVKgf28cP2srztfhUZcfNFd2"
+    },
+    {
+      "id": null,
+      "name": "lii",
+      "lastName": "aaa",
+      "email": "lii@doe.com",
+      "username": "lliii",
+      "password": "$2b$10$CPjKb0DBTOURn1s55Jeaje7k4XWH/ImdAoSDGECR89zS.CBjXf/Qa"
+    },
+    {
+      "id": 4,
+      "name": "loo",
+      "lastName": "bbb",
+      "email": "loo@doe.com",
+      "username": "updated",
+      "password": "$2b$10$hkp9DKvLv./X.mJTcb7VY.c4IBubNRe1/4b5g1V2OUlqi4GNAKdHy"
+    },
+    {
+      "id": 5,
+      "name": "leo",
+      "lastName": "rojas",
+      "email": "leo@rojas.com",
+      "username": "leorojaS",
+      "password": "$2b$10$TKdh/73AA78kvNnGyiblau3iUQHmfx9NWrIGS/kuVQJIZtHZhHYJi"
+    },
+    {
+      "name": "loo",
+      "lastName": "bbb",
+      "email": "loo@doe.com",
+      "username": "updated",
+      "password": "$2b$10$9TrMyZxKk5ON.9CTKS2ekO480d47glC/BRAzs5vP9Df5eBfR/D9O2"
+    }
+  ]
