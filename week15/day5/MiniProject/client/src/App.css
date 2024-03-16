@@ -1,0 +1,6 @@
+li:hover {
+  text-decoration: line-through;
+  cursor: progress;
+  
+}
+
